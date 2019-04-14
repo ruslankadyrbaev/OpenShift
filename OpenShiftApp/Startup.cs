@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -27,7 +28,7 @@ namespace OpenShiftApp
                 app.UseDeveloperExceptionPage();
             }
 
-            var json = JsonConvert.SerializeObject(settings.Value);
+            var json = JsonConvert.SerializeObject(new {settings.Value, env});
             app.Run(async (context) => { await context.Response.WriteAsync(json); });
         }
     }
