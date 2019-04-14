@@ -1,0 +1,33 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false, 
+    "anonymousAuthentication": true, 
+    "iisExpress": {
+      "applicationUrl": "http://localhost:39317",
+      "sslPort": 44367
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "OpenShiftApp": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "GLOBAL_APP__SimpleKey": "Env",
+        "GLOBAL_APP__ArrayKey:0": "Env",
+        "GLOBAL_APP__ArrayKey:1": "Env",
+        "GLOBAL_APP__ObjectKey__SimpleKey2": "Env",
+        "GLOBAL_APP__ObjectKey__ArrayKey2:0": "Env",
+        "GLOBAL_APP__ObjectKey__ArrayKey2:1": "Env"
+      }
+    }
+  }
+}
